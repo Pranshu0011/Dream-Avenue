@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dream Avenue</title>
+    
+        <style link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        body {
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+            min-height: 100vh; /* Ensures the body fills the height of the viewport */
+        }
+
+        h1 {
+            text-align: center;
+            background-color: brown;
+            color: burlywood;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: azure;
+            padding: 30px 0;
+        }
+
+        .navbar h {
+            font-size: 24px;
+            margin: 0;
+            padding-left: 20px;
+            float: left;
+            height: 100%;
+            line-height: 30px;
+        }
+
+        .navbar a {
+            float: right;
+            padding: 0 20px;
+            color: azure;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffc107;
+        }
+
+        h3 {
+            color: #c05b5b;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-form {
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 400px; /* Adjust the width as needed */
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 20px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            /* Removed float: left; */
+            margin-right: 20px;
+            max-width: 50%;
+            border-radius: 5px;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+
+        .property {
+            margin-top: 50px;
+            text-align: left;
+            padding: 20px;
+            /* Added display: flex; and align-items: center; */
+            display: flex;
+            align-items: center;
+        }
+
+        .property p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .map-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px; /* Adjust the height as needed */
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .footer a:hover {
+            color: #ffc107;
+
+
+        }
+
+        .property-listings {
+            max-height: 400px; /* Set the maximum height for the scrollable section */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 10px; /* Optional: Add padding for better appearance */
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+    
+</head>
+<body>
+<div class="navbar">
+    <h>Dream Avenue</h>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<h1>Welcome to Dream Avenue</h1>
+
+<h3>One Solution To Find Your Property</h3>
+
+<br>
+<div class="search-bar">
+    <input type="text" placeholder="Search for property in India...">
+    <button type="submit">Search</button>
+</div>
+<br>
+
+<div class="signup-form">
+    <h2>Sign Up</h2>
+    <form action="login.php" method="post">
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p>Not a member? <a href="https://gobroker.co.in">Register</a></p>
+</div>
+<br>
+
+<p> WE OFFER A SUPERIOR LEVEL OF SERVICE 
+
+    Some organizations view property management as a basic task of rent collection and tenant placement. Their approach involves dispatching repair Services
+    we take immense pride in offering the finest property listings available online across India. With a dedicated team of experts and cutting-edge technology, we strive to provide our clients with an unparalleled experience in their property search journey. Whether you're looking for a cozy apartment in a bustling city or a serene villa nestled amidst nature, our extensive database ensures that you find the perfect property to suit your needs and preferences. From residential to commercial spaces, our platform showcases a diverse range of listings, meticulously curated to cater to every requirement. With our commitment to excellence and customer satisfaction, we stand as your trusted partner in navigating the dynamic landscape of real estate in India.
+
+    <br>
+    <br>
+    <br>
+
+</p>
+
+<div class="property-listings">
+    <div class="property">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 300px;" alt="Property 1">
+
+        <p>
+            Fully Furnished house for rent.
+            <br>
+            Address: 25, Rajpur Road, Dehradun
+            <br>
+            Contact:892394342
+        </p>
+
+        <br>
+        <br>
+
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=3092&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 300px;" alt="Property 2">
+        <p> 2 BHK floor for rent.
+            <br>
+            fully furnished
+            <br>
+            Great location, 121 Lok Street, Dehradun
+            <br>
+            Contact:876543123
+        </p>
+    </div>
+
+    <!-- Add more property listings as needed -->
+</div>
+
+<div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.709440296485!2d-77.02604288540112!3d38.8976769837076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x7f3c8de0d4c496b7!2sWhite%20House!5e0!3m2!1sen!2sus!4v1647326238044!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<h><b>Want to rent your property?</b></h>
+<footer class="footer footer1">
+    <div class="container pt-5 pb-5">
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <img class="foot-logo" src="file:///Users/pranshu/Documents/codes/cloud%20project/dream-avenue-high-resolution-logo.jpeg" alt="Logo School">
+            </div>
+  
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4 foot-col mb-2">
+                        <h4>About</h4>
+                        <p>123 Rajpur Road <br>
+                            Uttarakhand, 248001<br>
+                            Phone: 0135 - 220933</p>
+                    </div>
+                    <div class="col-md-4 foot-col mb-2">
+                        <h4>Contacts</h4>
+                        <p><a href="#">Blog & Articles</a></p>
+                        <p><a href="#">Terms and Conditions</a></p>
+                        <p><a href="#">Privacy Policy</a></p>
+                        <p><a href="#">Contact</a></p>
+                    </div>
+                    <div class="col-md-4 foot-col mb-2">
+                        <h4>Navigation</h4>
+                        <p><a href="#">About</a></p>
+                        <p><a href="#">Services</a></p>
+                        <p><a href="#">Projects</a></p>
+                        <p><a href="#">Testimonials</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        
+    </div>
+
+  </footer>
+  <footer class="footer footer2">
+    <div class="container pt-3 pb-2">
+        <div class="row">
+            <div class="col-md-8 foot-bottom-text">
+                <p>Privacy Policy / Sample website education proposal - RibosMatic © 2021 
+                    / All Rights Reserved</p>
+            </div>
+            <div class="col-md-4 social-links content-right">
+                <a href="#" class="fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="tw">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="ig">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+</script>
+</body>
+</html>
